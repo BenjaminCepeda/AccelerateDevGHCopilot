@@ -20,6 +20,8 @@ services.AddScoped<IPatronService, PatronService>();
 services.AddSingleton<JsonData>();
 services.AddSingleton<ConsoleApp>();
 
+// JsonData and ConsoleApp are already registered as singletons
+
 var servicesProvider = services.BuildServiceProvider();
 
 var consoleApp = servicesProvider.GetRequiredService<ConsoleApp>();
